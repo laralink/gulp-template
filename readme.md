@@ -8,8 +8,8 @@ npm run build
 
 ###Source code structure
 ```
-src
-|--assets
+root
+|--src
 |   |--assets
 |   |   |--fonts
 |   |   |--img
@@ -27,8 +27,8 @@ src
 
 #####Dist code structure(After ``npm run build``)
 ```
-src
-|--assets
+root
+|--src
 |   |--assets
 |   |   |--fonts
 |   |   |--img
