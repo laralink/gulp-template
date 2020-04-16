@@ -28,7 +28,7 @@ root
 #####Dist code structure(After ``npm run build``)
 ```
 root
-|--src
+|--dist
 |   |--assets
 |   |   |--fonts
 |   |   |--img
