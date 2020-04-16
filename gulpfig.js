@@ -12,17 +12,24 @@ const
         {
             source: './src/assets/img',
             destination: './dist/assets/img'
+        },
+        {
+            source: './node_modules/font-awesome/fonts',
+            destination: './dist/assets/fonts'
         }
+
     ],
 
     VENDOR_SCSS = [
-        "./src/assets/sass/*.scss",
+        "./node_modules/font-awesome/css/font-awesome.css",
+        "./node_modules/bootstrap/dist/css/bootstrap.css",
     ],
     SCSS = [
         "./src/assets/sass/*.scss",
     ],
     VENDOR_JS = [
-        "./src/assets/js/*.js",
+        "./node_modules/jquery/dist/jquery.js",
+        "./node_modules/bootstrap/dist/js/bootstrap.js",
     ],
     JS = [
         "./src/assets/js/*.js",

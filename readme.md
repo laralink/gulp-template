@@ -4,6 +4,7 @@
 ```
 npm run dev
 npm run build
+npm run clean
 ```
 
 ###Source code structure

@@ -16,17 +16,13 @@ const concat = require('gulp-concat');
 const ncp = require('ncp').ncp;
 const htmlbeautify = require('gulp-html-beautify');
 const config = require('./gulpfig').default;
+const fs = require('fs-extra');
 ncp.limit = 16;
 
 
 function copy(src, dst) {
     var msg = "Copying " + src + ' to ' + dst + ' ';
-    ncp(src, dst, function(err) {
-        if (err) {
-            return console.error(msg + err);
-        }
-        console.info(msg + ' - Successful');
-    })
+    fs.copySync(src, dst)
 }
 
 // Load package.json for banner
@@ -97,7 +93,6 @@ function css() {
     .src(config.SCSS)
     .pipe(plumber())
     .pipe(sass({
-      outputStyle: "expanded",
       includePaths: "./node_modules",
     }))
     .on("error", sass.logError)
@@ -152,6 +147,7 @@ function pages() {
             pkg: pkg
         }))
         .pipe(gulp.dest('./dist/'))
+       .pipe(browsersync.stream());
 }
 
 // Watch files

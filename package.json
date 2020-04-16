@@ -3,7 +3,10 @@
   "name": "gulp-template",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node_modules/.bin/gulp watch"
+    "dev": "node_modules/.bin/gulp watch",
+    "build": "node_modules/.bin/gulp build",
+    "clear": "node_modules/.bin/gulp clean",
+    "clean": "npm run clear && git checkout dist/."
   },
   "description": "An open source gulp based build template.",
   "keywords": [
@@ -32,6 +35,9 @@
     "url": "https://github.com/laralink/gulp-template.git"
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.5.0"
   },
   "devDependencies": {
     "browser-sync": "2.26.7",
@@ -47,6 +53,8 @@
     "merge-stream": "2.0.0",
     "ncp": "^2.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-html-beautify": "^1.0.1"
+    "gulp-html-beautify": "^1.0.1",
+    "fs": "0.0.1-security",
+    "fs-extra": "^9.0.0"
   }
 }
